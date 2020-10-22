@@ -1,7 +1,8 @@
-package Planes;
+package plane;
 
-import models.ClassificationLevel;
-import models.ExperimentalTypes;
+
+import model.ClassificationLevel;
+import model.ExperimentalTypes;
 
 
 public class ExperimentalPlane extends Plane{
@@ -36,7 +37,7 @@ public class ExperimentalPlane extends Plane{
     @Override
     public String toString() {
         return "experimentalPlane{" +
-                "model='" + model + '\'' +
+                "model='" + planemodel + '\'' +
                 '}';
     }
 }

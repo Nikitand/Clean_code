@@ -1,7 +1,7 @@
-import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
+import model.MilitaryType;
+import plane.MilitaryPlane;
+import plane.PassengerPlane;
+import plane.Plane;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,9 +34,7 @@ public class Runner {
         System.out.println("Passenger airport sorted by max speed: " + passengerAirport
                 .sortByMaxSpeed()
                 .toString());
-        System.out.println("All planes sorted by max load capacity: " + airport
-                .sortPlanesByMaxLoadCapacity()
-                .toString());
+
         System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());
     }
 }

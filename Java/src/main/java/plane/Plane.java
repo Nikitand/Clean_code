@@ -1,4 +1,4 @@
-package Planes;
+package plane;
 
 import java.util.Objects;
 
@@ -9,17 +9,17 @@ import java.util.Objects;
     private int maxLoadCapacity;
 
     public Plane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity) {
-        this.model = model;
+        this.planemodel = model;
         this.maxSpeed = maxSpeed;
         this.maxFlightDistance = maxFlightDistance;
         this.maxLoadCapacity = maxLoadCapacity;
     }
 
     public String getModel() {
-        return model;
+        return planemodel;
     }
 
-    public int getMS() {
+    public int getMaxSpeed() {
         return maxSpeed;
     }
 
@@ -35,7 +35,7 @@ import java.util.Objects;
     @Override
     public String toString() {
         return "Plane{" +
-                "model='" + model + '\'' +
+                "model='" + planemodel + '\'' +
                 ", maxSpeed=" + maxSpeed +
                 ", maxFlightDistance=" + maxFlightDistance +
                 ", maxLoadCapacity=" + maxLoadCapacity +
@@ -45,16 +45,16 @@ import java.util.Objects;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        Assert.assertfalse (!(o instanceof Plane));
+        if (!(o instanceof Plane)) return false;
         Plane currentplane = (Plane) o;
         return maxSpeed == currentplane.maxSpeed &&
                 maxFlightDistance == currentplane.maxFlightDistance &&
                 maxLoadCapacity == currentplane.maxLoadCapacity &&
-                Objects.equals(model, currentplane.model);
+                Objects.equals(planemodel, currentplane.planemodel);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
+        return Objects.hash(planemodel, maxSpeed, maxFlightDistance, maxLoadCapacity);
     }
 }

@@ -1,6 +1,6 @@
-package Planes;
+package plane;
 
-import models.MilitaryType;
+import model.MilitaryType;
 
 import java.util.Objects;
 
@@ -8,14 +8,15 @@ public class MilitaryPlane extends Plane{
 
     private MilitaryType militaryType;
 
-    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
-        super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
+    public MilitaryPlane(String planeModel, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
+        super(planeModel, maxSpeed, maxFlightDistance, maxLoadCapacity);
         this.militaryType = type;
     }
 
-    public MilitaryType getType() {
+            public MilitaryType getMilitaryType() {
         return militaryType;
     }
+
 
     @Override
     public String toString() {
@@ -37,6 +38,7 @@ public class MilitaryPlane extends Plane{
         }
         MilitaryPlane that = (MilitaryPlane) o;
         return militaryType == that.militaryType;
+    }
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), militaryType);
